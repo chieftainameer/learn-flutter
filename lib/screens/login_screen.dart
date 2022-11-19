@@ -40,11 +40,11 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton(
-                      onPressed: (){},
-                      child: Text("Login"),
-                      style: ButtonStyle(
-                        foregroundColor: MaterialStatePropertyAll(Colors.white70)
-                      ),
+                      onPressed: (){
+                        Navigator.pushNamed(context, "/");
+                      },
+                      child: const Text("Login",style: TextStyle(fontSize: 16.0),),
+                      style: TextButton.styleFrom(minimumSize: Size(110,40)),
                       )
                   ],
                 )
