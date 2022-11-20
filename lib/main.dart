@@ -1,5 +1,8 @@
 import 'package:firebase_app/screens/home_screen.dart';
+import 'package:firebase_app/screens/location_details.dart';
 import 'package:firebase_app/screens/login_screen.dart';
+import 'package:firebase_app/screens/review_screen.dart';
+import 'package:firebase_app/screens/stack_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,10 +26,13 @@ class App extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
         primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
-      initialRoute: "/login",
+      initialRoute: "/location",
       routes: {
         "/" :(context) => HomeScreen(),
-        '/login' :(context) => LoginScreen()
+        '/login' :(context) => LoginScreen(),
+        '/details':(context) => ReviewScreen(),
+        '/stack':(context) => StackScreen(),
+        '/location':(context) => LocationDetails(),
       },
     );
   }
